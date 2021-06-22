@@ -41,8 +41,10 @@ app.use('/post', postRouter);
 
 app.use(errorHandler);
 
-const server = app.listen(3000, () => {
-  console.log('Server is up on port ' + 3000);
+const PORT = process.env.PORT || 5000;
+
+const server = app.listen(PORT, () => {
+  console.log('Server is up on port ' + PORT);
 });
 
 const io = require('socket.io').listen(server);
