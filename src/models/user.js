@@ -20,9 +20,10 @@ const userSchema = new mongoose.Schema(
       validate(value) {
         if (!validator.isEmail(value)) {
           throw new Error('Email is invalid');
-        } else if (!value.endsWith('@marwadiuniversity.ac.in')) {
-          throw new Error('Only Marwadi university students are allowed');
         }
+        // else if (!value.endsWith('@marwadiuniversity.ac.in')) {
+        //   throw new Error('Only Marwadi university students are allowed');
+        // }
       },
     },
     password: {
